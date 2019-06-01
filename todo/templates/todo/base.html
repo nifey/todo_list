@@ -1,0 +1,16 @@
+{% load static %}
+<html>
+	<head>
+		<title>Todo List</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		<link href='https://fonts.googleapis.com/css?family=Yatra One' rel='stylesheet'>
+		<link rel="stylesheet" type="text/css" href="{% static "css/list.css" %}">
+	</head>
+	<body>
+		<div class="header">
+		<h1>Todo list</h1>
+		</div>
+		{% block content %}
+		{% endblock %}
+	</body>
+</html>

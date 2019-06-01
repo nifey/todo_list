@@ -1,0 +1,26 @@
+{% extends 'todo/base.html' %} 
+
+{% block content %} 
+{% for item in list %} 
+	{% if not item.done %}
+	<div class="item notdone">
+    		<a href="{% url 'item_done' pk=item.pk %}"><span class="btn glyphicon glyphicon-unchecked"></span></a> {{item.text}}
+    		<a href="{% url 'delete_item' pk=item.pk %}"><span class="btn glyphicon glyphicon-trash"></span></a>
+	</div>
+	{% endif %}
+{% endfor %}
+
+<form action="{% url 'new_item' %}" method="POST">
+    {% csrf_token %}
+    <div class="item notdone"><span class="btn glyphicon glyphicon-plus" onclick="this.parentNode.parentNode.submit()"></span>{{ form.text }}</div>
+</form>
+
+{% for item in list %} 
+	{% if item.done %}
+	<div class="item done">
+    		<a href="{% url 'item_undone' pk=item.pk %}"><span class="btn glyphicon glyphicon-check"></span></a> {{item.text}}
+    		<a href="{% url 'delete_item' pk=item.pk %}"><span class="btn glyphicon glyphicon-trash"></span></a>
+	</div>
+	{% endif %}
+{% endfor %}
+{% endblock %}

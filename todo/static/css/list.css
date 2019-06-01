@@ -1,0 +1,49 @@
+body{
+	font-family: 'Yatra One';
+}
+
+.header {
+	color: #7CDBD5;
+	margin: auto;
+	margin-top: 10px;
+	width:90%;
+	background-color: #F9BE02;
+	padding-top:1px;
+	padding-bottom:1px;
+}
+
+h1 {
+	text-align: center;
+}
+
+div.item {
+	display: block;
+	margin: auto;
+	width: 90%;
+	word-wrap: break-word;
+	margin-top: 10px;
+	padding-left:5px;
+	padding-right:5px;
+}
+
+div.notdone {
+	background-color: #F53240;
+}
+
+div.done {
+	background-color: #02C8A7;
+}
+
+div a {
+	text-decoration: none;
+	text-align: right;
+}
+
+input {
+	height:34px;
+	margin-right:3px;
+	margin-top:2px;
+	width: 80%;
+	background-color: #F53240;
+	border: none;
+}
